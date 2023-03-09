@@ -8,7 +8,7 @@ function App() {
 
   const loadData = async () => {
     try {
-      const response = await fetch('http://localhost:3000/load', { method: 'POST' });
+      const response = await fetch('http://34.219.144.170:3000/load', { method: 'POST' });
       const message = await response.text();
       setMessage(message);
     } catch (error) {
@@ -19,7 +19,7 @@ function App() {
 
   const clearData = async () => {
     try {
-      const response = await fetch('http://localhost:3000/clear', { method: 'POST' });
+      const response = await fetch('http://34.219.144.170:3000/clear', { method: 'POST' });
       const message = await response.text();
       setMessage(message);
       setData([]);
@@ -32,7 +32,7 @@ function App() {
   const queryData = async () => {
     console.log(`Querying data with first name: ${firstName} and last name: ${lastName}`);
     try {
-      const response = await fetch('http://localhost:3000/query', {
+      const response = await fetch('http://34.219.144.170:3000/query', {
         method: 'POST',
         headers: {
           'Content-Type': 'application/json',
